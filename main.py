@@ -23,7 +23,9 @@ def get_latest_silksong():
     data = json.loads(text)
     video_id = data["items"][0]["id"]["videoId"]
     ss_url = "https://youtu.be/" + video_id
-    return ss_url
+    publish_time = data["items"][0]["snippet"]["publishTime"]
+    date = publish_time.split("T")[0]
+    return ss_url, date
 
 @client.event
 async def on_voice_state_update(member, before, after):
@@ -37,11 +39,15 @@ async def on_voice_state_update(member, before, after):
         return
     
     #check if played
-    today = date.today().strftime("%d/%m/%Y")
+    today = date.today().strftime("%Y-%m-%d")
     if last_played == today:
         return
 
-    url = get_latest_silksong()
+    url, yt_posted_date = get_latest_silksong()
+    # check if new video is from today
+    if yt_posted_date != today:
+        return
+
     voiceChannel = after.channel
     song_there = os.path.isfile("song.mp3")
     

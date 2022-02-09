@@ -35,7 +35,7 @@ async def on_voice_state_update(member, before, after):
         return
     
     # check if ben
-    if member.name != "parasol24":
+    if member.name != "Chilly":
         return
     
     #check if played

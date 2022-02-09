@@ -64,6 +64,7 @@ tmux new -s silkbot
 ```
 
 Detaching from the session:
+
 Press `Crtl+b` then press `d`
 
 Reconnect to session:

@@ -2,6 +2,8 @@
 
 Do you have that one friend that really likes Hollow Knight. Are they waiting for Silksong to come out? Heckle them with this Discord bot.
 
+This bot plays the most recent video from the [Daily Silksong News Youtube Channel](https://www.youtube.com/c/dailysilksongnews) whenever a specific user enters voice chat once a day.
+
 # Installation
 
 ### Python

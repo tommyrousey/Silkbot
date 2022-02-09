@@ -48,7 +48,7 @@ python3 main.py
 
 # Tips
 ### Customize to target your one friend who is desparate for Silksong to come out
-Change the member name check on line 38:
+Change the member name check on line 38 (Note this is their account name, not their server nickname):
 ```python
 # check if ben
 if member.name != "parasol24":
